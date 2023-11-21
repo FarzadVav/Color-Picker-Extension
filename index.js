@@ -1,4 +1,6 @@
-document.querySelector(".pick").addEventListener("click", () => {
+const pick = document.querySelector(".pick")
+
+pick.addEventListener("click", () => {
   const resultElement = document.querySelector(".result");
 
   if (!window.EyeDropper) {
@@ -15,6 +17,11 @@ document.querySelector(".pick").addEventListener("click", () => {
       resultElement.textContent = result.sRGBHex;
       resultElement.style.backgroundColor = result.sRGBHex;
       document.body.style.borderColor = `${result.sRGBHex}45`
+      navigator.clipboard.writeText(result.sRGBHex)
+      pick.innerHTML = 'copied :)'
+      setTimeout(() => {
+        pick.innerHTML = 'pick'
+      }, 2000);
     })
     .catch((e) => {
       resultElement.textContent = e;
