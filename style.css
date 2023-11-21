@@ -6,7 +6,9 @@
 }
 
 body {
-  border: 0.5rem solid #dfdfdf;
+  background-color: #1a1a1a;
+  border: 0.5rem solid #282930;
+  color: #efefef;
   min-width: 20rem;
   display: flex;
   flex-direction: column;
@@ -25,7 +27,8 @@ div {
 }
 
 button {
-  background-color: #dfdfdf;
+  background-color: #282930;
+  color: #efefef;
   border: none;
   text-align: center;
   width: 50%;
@@ -37,7 +40,7 @@ button {
 }
 
 button:hover {
-  background-color: #cfcfcf;
+  filter: brightness(1.15);
 }
 
 button:active {
@@ -45,7 +48,8 @@ button:active {
 }
 
 p {
-  background-color: #dfdfdf;
+  background-color: #fff;
+  text-shadow: 1px 1px 0 #28293075;
   text-align: center;
   width: 50%;
   padding: 0.5rem 2rem;
